@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 375px;
+            max-width: 375px;
+            text-align: center;
+        }
+
+        .imgs-box img {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Click this images to preview</h3>
+    <div class="imgs-box" id="img_box">
+        <img src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+    </div>
+</body>
+<script src="../previewImage.min.js"></script>
+<script>
+    var imgs = document.querySelectorAll('.imgs-box img')
+    var urls = []
+    for (let i = 0; i < imgs.length; i++) {
+        const elm = imgs[i];
+        urls.push(elm.src)
+        elm.addEventListener('click', function () {
+            var current = this.src;
+            var obj = {
+                urls: urls,
+                current: current
+            };
+            previewImage.start(obj);
+        })
+    }
+</script>
+
+</html>
