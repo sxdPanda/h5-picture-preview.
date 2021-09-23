@@ -1,8 +1,3 @@
-/*
-Title: previewImage
-Description: previewImage
-*/
-
 # 功能描述
 previewImage是仿wx.previewImage的原生js实现，支持图片预览，滑动切换，双指缩放，图片缓存
 
@@ -38,5 +33,5 @@ previewImage.start(obj);
 previewImage.start(obj)
 ```
 
-# 特别说明
-更多配置和用法，请参考examples/index.html
+# 注意事项
+* 直接放在head中引用可能会出现appendChild错误的信息啥的，遇到这个问题不要慌，给它换到body中即可完美解决

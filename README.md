@@ -3,35 +3,37 @@
 #### 介绍
 previewImage.js 实现的移动端图片的预览，缩放功能，官方下载链接：https://www.apicloud.com/mod_detail/previewImage
 
-#### 软件架构
-软件架构说明
+# 功能描述
+previewImage是仿wx.previewImage的原生js实现，支持图片预览，滑动切换，双指缩放，图片缓存
 
+# 快速使用
 
-#### 安装教程
+```js
+var obj = {
+    urls : ['img/1.jpg','img/2.png','img/3.png'],
+    current : 'img/1.png'
+};
+previewImage.start(obj);
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 配置项
 
-#### 使用说明
+### urls
+* 类型：Array
+* 默认值：null
+* 作用：预览的图集路径
+* 是否必传：是
+### current
+* 类型：String
+* 默认值：none
+* 作用：当前预览的图路径
+* 是否必传：是
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 方法
+### 查看
+```js
+previewImage.start(obj)
+```
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+# 注意事项
+* 直接放在head中引用可能会出现appendChild错误的信息啥的，遇到这个问题不要慌，给它换到body中即可完美解决
