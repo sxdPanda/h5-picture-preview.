@@ -1,4 +1,4 @@
-### h5 图片预览
+### h5 图片预览 （官方的文档地址已经找不到了，要看就看我这个demo吧）
 
 #### 介绍
 previewImage.js 实现的移动端图片的预览，缩放功能，官方下载链接：https://www.apicloud.com/mod_detail/previewImage
